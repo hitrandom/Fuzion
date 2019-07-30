@@ -4,6 +4,7 @@
 #include "../interfaces.h"
 #include "../settings.h"
 #include "../Utils/xorstring.h"
+#include "../Utils/util.h"
 
 #include "Windows/colors.h"
 #include "Windows/configs.h"
@@ -104,7 +105,7 @@ void UI::SwapWindow()
 	if (engine->IsInGame())
 		return;
 
-    Draw::ImText( ImVec2( 4.f, 4.f ), ImColor( 255, 255, 255, 255 ), XORSTR( "Fuzion" ), nullptr, 0.0f, nullptr,
+    Draw::ImText( ImVec2( 4.f, 4.f ), Util::GetRainbowColor( 0.1f ), XORSTR( "Fuzion" ), nullptr, 0.0f, nullptr,
                   ImFontFlags_Shadow );
 }
 
